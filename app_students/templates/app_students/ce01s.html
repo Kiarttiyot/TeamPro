@@ -4,14 +4,14 @@
     <h1>CE 01</h1>
     <table border="1">
         <tr>
-            <th>years</th>
+            <th>gender</th>
             <th>Name</th>
             <th>Email</th>
         </tr>
         {% for item in ce01s %}
             {% if item.years == 1 %}
             <tr>
-                <td>{{item.years}}</td>
+                <td>{{ item.gender }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.email }}</td>
             </tr>
