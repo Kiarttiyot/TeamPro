@@ -36,6 +36,7 @@ def ce04s(request):
     sync_google_sheet_data()
     ce04s = GoogleSheetData.objects.all()
     return render(request, 'app_students/ce04s.html',{'ce04s':ce04s})
+
 def ce01(request, ce01D):
     sync_google_sheet_data()  # Sync data if necessary
     try:

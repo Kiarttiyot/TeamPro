@@ -1,5 +1,33 @@
 {% extends 'app_general/components/base.html' %}
-{% block site_title %}CE 01{% endblock %}
+{% block site_title %}CE 02{% endblock %}
 {% block content %}
-    
+<div>
+    <div>
+        <h1>รหัสนักศึกษา</h1>
+        <h2>{{ ce02.student_id }}</h2>
+    </div>
+    <div>
+        <h1>ชื่อ - นามสกุล</h1>
+        <h2>{{ ce02.name }}</h2>
+    </div>
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541">
+        <div>
+            <h2>Student ID: </h2>
+            <h3>{{ce02.student_id}}</h3>
+            <h2>Name: </h2>
+            <h3>{{ce02.title}} {{ce02.name}}</h3>
+            <h2>Gender: </h2>
+            <h3>{{ce02.gender}}</h3>
+            <h2>Nickname: </h2>
+            <h3>{{ce02.nickname}}</h3>
+            <h2>Year: </h2>
+            <h3>{{ce02.years}}</h3>
+            <h2>Phone: </h2>
+            <h3>{{ce02.phone}}</h3>
+            <h2>E-Mail: </h2>
+            <h3>{{ce02.email}}</h3>
+        </div>
+    </div>
+</div>    
 {% endblock content %}

@@ -1,21 +1,19 @@
 {% extends 'app_general/components/base.html' %}
 {% block site_title %}CE 03{% endblock %}
 {% block content %}
-    <h1>CE 03</h1>
-    <table border="1">
+<h1>CE 03</h1>
+<table border="1">
+    <tr>
+        <th>รหัสนักศึกษา</th>
+        <th>ชื่อ-นามสกุล</th>
+    </tr>
+    {% for item in ce03s %}
+        {% if item.years == 2 %}
         <tr>
-            <th>gender</th>
-            <th>Name</th>
-            <th>Email</th>
+            <td><a href="{% url 'ce03' item.D %}">{{ item.student_id }}</a></td>
+            <td><a href="{% url 'ce03' item.D %}">{{ item.name }}</a></td>
         </tr>
-        {% for item in ce03s %}
-            {% if item.years == 3 %}
-            <tr>
-                <td>{{ item.gender }}</td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.email }}</td>
-            </tr>
-            {% endif %}
-        {% endfor %}
-    </table>
+        {% endif %}
+    {% endfor %}
+</table>
 {% endblock content %}

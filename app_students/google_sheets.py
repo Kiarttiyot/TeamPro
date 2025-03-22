@@ -1,4 +1,5 @@
 import gspread
+from google.oauth2.service_account import Credentials
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 
@@ -6,7 +7,7 @@ import pandas as pd
 SCOPE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
-CREDS = ServiceAccountCredentials.from_json_keyfile_name("credentials/teamproject-453612-c8ca56c984e9.json", SCOPE)
+CREDS = ServiceAccountCredentials.from_json_keyfile_name("credentials/inbound-vim-453612-c7-547ef3cccba1.json", SCOPE)
 CLIENT = gspread.authorize(CREDS)
 
 # 2. เปิด Google Sheet ด้วย ID หรือชื่อไฟล์
