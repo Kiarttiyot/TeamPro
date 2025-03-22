@@ -4,16 +4,14 @@
     <h1>CE 01</h1>
     <table border="1">
         <tr>
-            <th>gender</th>
-            <th>Name</th>
-            <th>Email</th>
+            <th>รหัสนักศึกษา</th>
+            <th>ชื่อ-นามสกุล</th>
         </tr>
         {% for item in ce01s %}
-            {% if item.years == 1 %}
+            {% if item.years == 4 %}
             <tr>
-                <td>{{ item.gender }}</td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.email }}</td>
+                <td><a href="{% url 'ce01' item.D %}">{{ item.student_id }}</a></td>
+                <td><a href="{% url 'ce01' item.D %}">{{ item.name }}</a></td>
             </tr>
             {% endif %}
         {% endfor %}
