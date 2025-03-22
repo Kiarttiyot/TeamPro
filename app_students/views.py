@@ -52,7 +52,7 @@ def ce02(request,ce02D):
     except GoogleSheetData.DoesNotExist:
         one_ce02 = None  # Handle the case where the object does not exist
     context = {'ce02': one_ce02}
-    return render(request, 'app_students/ce02.html', {'ce02D': ce02D})
+    return render(request, 'app_students/ce02.html', context)
 def ce03(request,ce03D):
     sync_google_sheet_data()  # Sync data if necessary
     try:
@@ -60,7 +60,7 @@ def ce03(request,ce03D):
     except GoogleSheetData.DoesNotExist:
         one_ce03 = None  # Handle the case where the object does not exist
     context = {'ce03': one_ce03}
-    return render(request, 'app_students/ce03.html', {'ce03D': ce03D})
+    return render(request, 'app_students/ce03.html', context)
 def ce04(request,ce04D):
     sync_google_sheet_data()  # Sync data if necessary
     try:
@@ -68,4 +68,4 @@ def ce04(request,ce04D):
     except GoogleSheetData.DoesNotExist:
         one_ce04 = None  # Handle the case where the object does not exist
     context = {'ce04': one_ce04}
-    return render(request, 'app_students/ce04.html', {'ce04D': ce04D})
+    return render(request, 'app_students/ce04.html', context)
