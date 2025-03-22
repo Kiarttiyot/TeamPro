@@ -2,4 +2,20 @@
 {% block site_title %}CE 03{% endblock %}
 {% block content %}
     <h1>CE 03</h1>
+    <table border="1">
+        <tr>
+            <th>years</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% for item in ce03s %}
+            {% if item.years == 3 %}
+            <tr>
+                <td>{{item.years}}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.email }}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
 {% endblock content %}
